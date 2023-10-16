@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-const themeColor = Colors.black54;
+const themeColor = Colors.black;
 
 void main() => runApp(MApp());
 
@@ -11,14 +11,22 @@ class MApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Text ('MApp',style: TextStyle(
-          fontSize: 20,
-          color: Colors.cyan,
-          fontFamily: "Arial",
-        ),)
+            fontSize: 20,
+            color: Colors.cyan,
+            fontFamily: "RobotoCondensed",
+            fontStyle: FontStyle.italic,
+          ),)
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Text("нажми если не гей"),
+        backgroundColor: Colors.teal,
+        onPressed: (){
+          print("кнопка нажата");
+        },
+      ),
+    ),
     );
   }
-  
 }
 
 
